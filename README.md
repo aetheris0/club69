@@ -1,11 +1,5 @@
-██████╗ ██╗     ██╗   ██╗██████╗      ██████╗  ██████╗ 
-██╔══██╗██║     ██║   ██║██╔══██╗    ██╔═══██╗██╔════╝ 
-██████╔╝██║     ██║   ██║██████╔╝    ██║   ██║██║  ███╗
-██╔══██╗██║     ██║   ██║██╔══██╗    ██║   ██║██║   ██║
-██║  ██║███████╗╚██████╔╝██║  ██║    ╚██████╔╝╚██████╔╝
-╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝     ╚═════╝  ╚═════╝ 
-<span style="color:#A020F0">           ████  C L U B   6 9  ████</span>
-       ▓▓▓ COOL • GAME • PORTAL ▓▓▓
+ ████  C L U B   6 9  ████
+ ▓▓▓ COOL • GAME • PORTAL ▓▓▓
 # 🎮 What Is Club 69?
 Club 69 is a fun, chaotic, neon‑glitch game hub built for people who want something different.
 Not another boring game site.
