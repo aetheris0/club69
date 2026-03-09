@@ -48,20 +48,24 @@ The glitch doesn’t wait.
 
 <div style="background:#050505; padding:18px; border-radius:12px; font-family:Consolas, monospace; font-size:16px; line-height:1.4;">
 
-  <span style="color:#A020F0; text-shadow:0 0 8px #A020F0;">
-    > ACCESSING CLUB_69...
+  <span style="color:#A020F0;">
+    > ACCESSING_CLUB_69...
   </span><br>
 
-  <span style="color:#00C8FF; text-shadow:0 0 8px #00C8FF;">
-    > CONNECTION STABLE.
+  <span style="color:#00C8FF;">
+    > C0NN3CTI0N_ST4BL3...
   </span><br>
 
-  <span style="color:#FF2EC4; text-shadow:0 0 8px #FF2EC4;">
-    > WELCOME,
+  <span style="color:#FF2EC4;">
+    > W3LC0M3,
   </span>
 
-  <span style="color:#39FF14; text-shadow:0 0 8px #39FF14;">
-    OUTSIDER.
-  </span>
+  <span style="color:#39FF14;">
+    0UTS1D3R_//
+  </span><br><br>
+
+  <span style="color:#A020F0;">> ▓▓▓▒▒▒░░░ SYST3M_FLICK3R...</span><br>
+  <span style="color:#00C8FF;">> ▒▒▒░░░▓▓▓ D4T4_STR34M_R3AL1GN...</span><br>
+  <span style="color:#FF2EC4;">> ░░░▓▓▓▒▒▒ ACC3SS_GR4NT3D...</span>
 
 </div>
