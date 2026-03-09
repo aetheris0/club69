@@ -45,3 +45,23 @@ Once 69 slots are filled, the doors close.
 🌀 Join Before the Gate Corrupts
 If you want in, move fast.
 The glitch doesn’t wait.
+
+<div style="background:#050505; padding:18px; border-radius:12px; font-family:Consolas, monospace; font-size:16px; line-height:1.4;">
+
+  <span style="color:#A020F0; text-shadow:0 0 8px #A020F0;">
+    > ACCESSING CLUB_69...
+  </span><br>
+
+  <span style="color:#00C8FF; text-shadow:0 0 8px #00C8FF;">
+    > CONNECTION STABLE.
+  </span><br>
+
+  <span style="color:#FF2EC4; text-shadow:0 0 8px #FF2EC4;">
+    > WELCOME,
+  </span>
+
+  <span style="color:#39FF14; text-shadow:0 0 8px #39FF14;">
+    OUTSIDER.
+  </span>
+
+</div>
