@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLUB 69 — Neon Glitch Hub</title>
+
+<style>
+    body {
+        margin: 0;
+        background: #050505;
+        font-family: Consolas, monospace;
+        color: white;
+        overflow: hidden;
+    }
+
+    /* INTRO SCREEN */
+    #intro {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: #050505;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 40px;
+        font-size: 22px;
+        opacity: 1;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .purple { color: #A020F0; }
+    .blue { color: #00C8FF; }
+    .pink { color: #FF2EC4; }
+    .green { color: #39FF14; }
+
+    /* GLITCH EFFECT */
+    .glitch {
+        animation: flicker 0.25s infinite alternate;
+    }
+
+    @keyframes flicker {
+        0% { opacity: 1; }
+        50% { opacity: 0.6; transform: translateX(1px); }
+        100% { opacity: 1; transform: translateX(-1px); }
+    }
+
+    /* MAIN CONTENT */
+    #main {
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        padding: 40px;
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    /* GAME GRID */
+    .grid {
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 260px;
+        height: 200px;
+        background: #111;
+        border: 2px solid #222;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.85;
+    }
+
+    .card:hover {
+        border-color: white;
+        transform: scale(1.05);
+    }
+
+    .label {
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .card:hover .label {
+        opacity: 1;
+        bottom: 10px;
+    }
+
+    /* EAGLER MENU */
+    #eaglerMenu {
+        display: none;
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        background: #111;
+        padding: 25px;
+        border: 2px solid #A020F0;
+        border-radius: 12px;
+        text-align: center;
+        z-index: 999;
+    }
+
+    #eaglerMenu button {
+        background: #A020F0;
+        border: none;
+        padding: 12px 20px;
+        margin: 10px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: 0.2s;
+    }
+
+    #eaglerMenu button:hover {
+        background: #00C8FF;
+    }
+
+    #closeMenu {
+        background: #FF2EC4;
+    }
+</style>
+
+<script>
+window.onload = function() {
+    setTimeout(() => {
+        document.getElementById("intro").style.opacity = 0;
+        setTimeout(() => {
+            document.getElementById("intro").style.display = "none";
+            document.getElementById("main").style.opacity = 1;
+        }, 1500);
+    }, 2500);
+};
+
+function openEaglerMenu() {
+    document.getElementById("eaglerMenu").style.display = "block";
+}
+
+function closeEaglerMenu() {
+    document.getElementById("eaglerMenu").style.display = "none";
+}
+</script>
+
+</head>
+<body>
+
+<!-- INTRO SCREEN -->
+<div id="intro">
+    <div class="purple glitch">> ACCESSING_CLUB_69...</div>
+    <div class="blue glitch">> C0NN3CTI0N_ST4BL3...</div>
+    <div class="pink glitch">> W3LC0M3, <span class="green">0UTS1D3R_//</span></div>
+</div>
+
+<!-- MAIN WEBSITE -->
+<div id="main">
+
+    <h1 style="text-align:center; color:#A020F0;">CLUB 69 — GAME PORTAL</h1>
+
+    <div class="grid">
+
+        <!-- ROBLOX -->
+        <div class="card" onclick="window.location.href='roblox.html'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
+            <div class="label">ROBLOX</div>
+        </div>
+
+        <!-- EAGLERCRAFT -->
+        <div class="card" onclick="openEaglerMenu()">
+            <img src="https://avatarfiles.alphacoders.com/353/thumb-1920-353897.jpg">
+            <div class="label">EAGLERCRAFT 1.12</div>
+        </div>
+
+    </div>
+</div>
+
+<!-- EAGLER MENU -->
+<div id="eaglerMenu">
+    <h2 style="color:#A020F0;">Choose Version</h2>
+
+    <button onclick="window.location.href='eagler-normal.html'">Normal 1.12</button>
+    <button onclick="window.location.href='eagler-hack.html'">Hack Client</button>
+    <button id="closeMenu" onclick="closeEaglerMenu()">Close</button>
+</div>
+
+</body>
+</html>
