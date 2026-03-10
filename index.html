@@ -13,7 +13,6 @@
         overflow-x: hidden;
     }
 
-    /* INTRO SCREEN */
     #intro {
         position: fixed;
         top: 0; left: 0;
@@ -44,14 +43,12 @@
         100% { opacity: 1; transform: translateX(-1px); }
     }
 
-    /* MAIN CONTENT */
     #main {
         opacity: 0;
         transition: opacity 1.5s ease-in-out;
         padding: 40px;
     }
 
-    /* GAME GRID */
     .grid {
         display: flex;
         gap: 25px;
@@ -98,7 +95,6 @@
         bottom: 10px;
     }
 
-    /* LOADING SCREEN */
     .loaderScreen {
         display: none;
         position: fixed;
@@ -112,7 +108,6 @@
         font-size: 22px;
     }
 
-    /* BACK BUTTON */
     #backBtn {
         position: fixed;
         top: 20px;
@@ -125,7 +120,6 @@
         z-index: 99999;
     }
 
-    /* FULLSCREEN BUTTON */
     #fullscreenBtn {
         position: fixed;
         top: 20px;
@@ -138,7 +132,6 @@
         z-index: 99999;
     }
 
-    /* DESCRIPTION BOX */
     #descriptionBox {
         width: 90%;
         margin: 40px auto;
@@ -195,165 +188,115 @@ function toggleFullscreen() {
 </head>
 <body>
 
-<!-- BACK BUTTON -->
 <div id="backBtn" onclick="goBack()">⬅ BACK</div>
-
-<!-- FULLSCREEN BUTTON -->
 <div id="fullscreenBtn" onclick="toggleFullscreen()">⛶ FULLSCREEN</div>
 
-<!-- INTRO -->
 <div id="intro">
     <div class="purple glitch">> ACCESSING_CLUB_69...</div>
     <div class="blue glitch">> C0NN3CTI0N_ST4BL3...</div>
     <div class="pink glitch">> W3LC0M3, <span class="green">0UTS1D3R_//</span></div>
 </div>
 
-<!-- MAIN -->
 <div id="main">
 
-    <h1 style="text-align:center; color:#A020F0;">CLUB 69 — GAME PORTAL</h1>
+<h1 style="text-align:center; color:#A020F0;">CLUB 69 — GAME PORTAL</h1>
 
-    <div class="grid">
-        <!-- 1v1.lol -->
-        <div class="card" onclick="loadGame('g1v1', '1v1-lol.html')">
-            <img src="https://i.imgur.com/4xQ2Z8P.png">
-            <div class="label">1V1.LOL</div>
-        </div>
+<div class="grid">
 
-        <!-- Drive Mad -->
-        <div class="card" onclick="loadGame('driveMad', 'drivemady.html')">
-            <img src="https://i.imgur.com/2Z8xg7F.png">
-            <div class="label">DRIVE MAD</div>
-        </div>
+<!-- 1v1.lol -->
+<div class="card" onclick="loadGame('g1v1', '1v1-lol.html')">
+    <img src="https://img.utdstc.com/icon/983/22a/98322a3b2be892eed31589906ffd949b68bcccc9a21ba562987965b5ec6bc6de:200">
+    <div class="label">1V1.LOL</div>
+</div>
 
-        <!-- Eaglercraft Wurst -->
-        <div class="card" onclick="loadGame('hackLoad', 'eagler-hack.html')">
-            <img src="https://avatarfiles.alphacoders.com/353/thumb-1920-353897.jpg">
-            <div class="label">EAGLERCRAFT WURST CLIENT EDITION</div>
-        </div>
+<!-- Drive Mad -->
+<div class="card" onclick="loadGame('driveMad', 'drivemady.html')">
+    <img src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/4abc77cf2ca8a1ca37416249429501f4/drive-mad.png">
+    <div class="label">DRIVE MAD</div>
+</div>
 
-        <!-- Johnny Trigger -->
-        <div class="card" onclick="loadGame('johnny', 'johnny-trigger.html')">
-            <img src="https://i.imgur.com/8Qk2t8R.png">
-            <div class="label">JOHNNY TRIGGER</div>
-        </div>
+<!-- Eaglercraft Wurst -->
+<div class="card" onclick="loadGame('hackLoad', 'eagler-hack.html')">
+    <img src="https://avatarfiles.alphacoders.com/353/thumb-1920-353897.jpg">
+    <div class="label">EAGLERCRAFT WURST CLIENT EDITION</div>
+</div>
 
-        <!-- Ragdoll Archers -->
-        <div class="card" onclick="loadGame('ragArch', 'archers.html')">
-            <img src="https://i.imgur.com/1k9t8dS.png">
-            <div class="label">RAGDOLL ARCHERS</div>
-        </div>
+<!-- Johnny Trigger -->
+<div class="card" onclick="loadGame('johnny', 'johnny-trigger.html')">
+    <img src="https://play-lh.googleusercontent.com/pEH-pYG8v1WmNjk3haRt6bR4b6pUpvDsQLtVB-xsxt-SR9O6cX6OxnM0him5joRq8A">
+    <div class="label">JOHNNY TRIGGER</div>
+</div>
 
-        <!-- Ragdoll Drop -->
-        <div class="card" onclick="loadGame('ragDrop', 'ragdoll-drop.html')">
-            <img src="https://i.imgur.com/7p8t3gD.png">
-            <div class="label">RAGDOLL DROP</div>
-        </div>
+<!-- Ragdoll Archers -->
+<div class="card" onclick="loadGame('ragArch', 'archers.html')">
+    <img src="https://imgs.crazygames.com/ragdoll-archers_1x1/20250926080758/ragdoll-archers_1x1-cover?format=auto&quality=100&metadata=none&width=1200">
+    <div class="label">RAGDOLL ARCHERS</div>
+</div>
 
-        <!-- Ragdoll Hit -->
-        <div class="card" onclick="loadGame('ragHit', 'ragdoll.html')">
-            <img src="https://i.imgur.com/6t8g3pF.png">
-            <div class="label">RAGDOLL HIT</div>
-        </div>
+<!-- Ragdoll Drop -->
+<div class="card" onclick="loadGame('ragDrop', 'ragdoll-drop.html')">
+    <img src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/518d4d2ed6c3c1b00930ba6313783c94/ragdoll-drop.jfif">
+    <div class="label">RAGDOLL DROP</div>
+</div>
 
-        <!-- Roblox -->
-        <div class="card" onclick="loadGame('robloxLoad', 'https://whowillsurvive.coopfire.com/main.html')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
-            <div class="label">ROBLOX</div>
-        </div>
+<!-- Ragdoll Hit -->
+<div class="card" onclick="loadGame('ragHit', 'ragdoll.html')">
+    <img src="https://img.poki-cdn.com/cdn-cgi/image/q=78,scq=50,width=1200,height=1200,fit=cover,f=png/3c892779be9dabb3589586c83ad3eeed/ragdoll-hit.png">
+    <div class="label">RAGDOLL HIT</div>
+</div>
 
-        <!-- Slope Plus -->
-        <div class="card" onclick="loadGame('slope', 'slopeplus.html')">
-            <img src="https://i.imgur.com/3g8p2tD.png">
-            <div class="label">SLOPE PLUS</div>
-        </div>
+<!-- Roblox -->
+<div class="card" onclick="loadGame('robloxLoad', 'https://whowillsurvive.coopfire.com/main.html')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
+    <div class="label">ROBLOX</div>
+</div>
 
-        <!-- Survival Race -->
-        <div class="card" onclick="loadGame('survival', 'survival-race.html')">
-            <img src="https://i.imgur.com/9t8g2pF.png">
-            <div class="label">SURVIVAL RACE</div>
-        </div>
+<!-- Slope Plus -->
+<div class="card" onclick="loadGame('slope', 'slopeplus.html')">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQo3vWFS8c9R5ihJE91yxb5vklRntjWgmxrw&s">
+    <div class="label">SLOPE PLUS</div>
+</div>
 
-        <!-- Tiny Fishing -->
-        <div class="card" onclick="loadGame('tinyFish', 'tiny-fishing.html')">
-            <img src="https://i.imgur.com/5g8p2tD.png">
-            <div class="label">TINY FISHING</div>
-        </div>
+<!-- Survival Race -->
+<div class="card" onclick="loadGame('survival', 'survival-race.html')">
+    <img src="https://geometrydashfullversion.io/cache/data/image/game/survival-race/survival-race-m200x200.webp">
+    <div class="label">SURVIVAL RACE</div>
+</div>
 
-    </div> <!-- END GRID -->
-        <!-- README DESCRIPTION -->
-    <div id="descriptionBox">
-        <h2 style="color:#00C8FF;">About This Website</h2>
-        <p>
-            This is the official CLUB 69 game portal.  
-            Featuring Roblox access and the Eaglercraft Wurst Client Edition.  
-            Designed with a glitchy neon aesthetic and optimized for iframe gameplay.  
-            Enjoy fullscreen mode, loading animations, and a smooth UI experience.
-        </p>
-    </div>
+<!-- Tiny Fishing -->
+<div class="card" onclick="loadGame('tinyFish', 'tiny-fishing.html')">
+    <img src="https://www.coolmathgames.com/sites/default/files/tiny-fishing-square-icon.png">
+    <div class="label">TINY FISHING</div>
+</div>
+
+</div> <!-- END GRID -->
+
+<div id="descriptionBox">
+    <h2 style="color:#00C8FF;">About This Website</h2>
+    <p>
+        This is the official CLUB 69 game portal.  
+        Featuring Roblox access and the Eaglercraft Wurst Client Edition.  
+        Designed with a glitchy neon aesthetic and optimized for iframe gameplay.  
+        Enjoy fullscreen mode, loading animations, and a smooth UI experience.
+    </p>
+</div>
 
 </div> <!-- END MAIN -->
 
+<!-- LOADING SCREENS -->
+<div id="g1v1" class="loaderScreen"><div class="purple glitch">> L04D1NG_1V1...</div></div>
+<div id="driveMad" class="loaderScreen"><div class="purple glitch">> L04D1NG_DR1V3_M4D...</div></div>
+<div id="hackLoad" class="loaderScreen"><div class="purple glitch">> L04D1NG_WURST...</div></div>
+<div id="johnny" class="loaderScreen"><div class="purple glitch">> L04D1NG_J0HNNY...</div></div>
+<div id="ragArch" class="loaderScreen"><div class="purple glitch">> L04D1NG_ARCHERS...</div></div>
+<div id="ragDrop" class="loaderScreen"><div class="purple glitch">> L04D1NG_DR0P...</div></div>
+<div id="ragHit" class="loaderScreen"><div class="purple glitch">> L04D1NG_H1T...</div></div>
+<div id="robloxLoad" class="loaderScreen"><div class="purple glitch">> L04D1NG_R0BL0X...</div></div>
+<div id="slope" class="loaderScreen"><div class="purple glitch">> L04D1NG_SL0P3...</div></div>
+<div id="survival" class="loaderScreen"><div class="purple glitch">> L04D1NG_SURV1V4L...</div></div>
+<div id="tinyFish" class="loaderScreen"><div class="purple glitch">> L04D1NG_F1SH...</div></div>
 
-<!-- LOADING SCREENS FOR ALL GAMES -->
-
-<div id="g1v1" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_1V1.L0L...</div>
-    <div class="blue glitch">> B00T1NG_3NG1N3...</div>
-</div>
-
-<div id="driveMad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_DR1V3_M4D...</div>
-    <div class="blue glitch">> B00T1NG_C4R_PHYS1CS...</div>
-</div>
-
-<div id="hackLoad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_WURST_CL13NT...</div>
-    <div class="blue glitch">> 3NG1N3_B00T...</div>
-</div>
-
-<div id="johnny" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_J0HNNY_TR1GG3R...</div>
-    <div class="blue glitch">> PR3P4R1NG_4CT10N...</div>
-</div>
-
-<div id="ragArch" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_R4GD0LL_4RCH3RS...</div>
-    <div class="blue glitch">> L04D1NG_PHYS1CS...</div>
-</div>
-
-<div id="ragDrop" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_R4GD0LL_DR0P...</div>
-    <div class="blue glitch">> PR3P4R1NG_1MP4CT...</div>
-</div>
-
-<div id="ragHit" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_R4GD0LL_H1T...</div>
-    <div class="blue glitch">> L04D1NG_3N3MY_41...</div>
-</div>
-
-<div id="robloxLoad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_R0BL0X...</div>
-    <div class="blue glitch">> C0NN3CT1NG...</div>
-</div>
-
-<div id="slope" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_SL0P3_PLUS...</div>
-    <div class="blue glitch">> PR3P4R1NG_SP33D...</div>
-</div>
-
-<div id="survival" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_SURV1V4L_R4C3...</div>
-    <div class="blue glitch">> G3TT1NG_TR4CK_R34DY...</div>
-</div>
-
-<div id="tinyFish" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_T1NY_F1SH1NG...</div>
-    <div class="blue glitch">> SP4WNING_F1SH...</div>
-</div>
-
-
-<!-- ROBLOX TUTORIAL (COLLAPSIBLE) -->
+<!-- ROBLOX TUTORIAL -->
 <div id="tutorialBox" style="
     width: 90%;
     margin: 40px auto;
@@ -364,7 +307,6 @@ function toggleFullscreen() {
     overflow: hidden;
     cursor: pointer;
 ">
-
     <div id="tutorialHeader" style="
         padding: 15px;
         font-size: 22px;
@@ -382,12 +324,11 @@ function toggleFullscreen() {
         line-height: 1.6;
     ">
         <span class="purple">1.</span> Click on the Roblox game<br>
-        <span class="blue">2.</span> Go to the little circle web button<br>
+        <span class="blue">2.</span> Click the little circle web button<br>
         <span class="pink">3.</span> Type in the search bar:<br>
         <span class="green">https://nowgg.fun/apps/a/19900/b.html</span><br>
-        <span class="purple">4.</span> Let it load and you're good to go!
+        <span class="purple">4.</span> Let it load and you're in.
     </div>
-
 </div>
 
 <script>
@@ -407,3 +348,4 @@ document.getElementById("tutorialHeader").onclick = function() {
 
 </body>
 </html>
+----- penar approved -----
