@@ -214,22 +214,74 @@ function toggleFullscreen() {
     <h1 style="text-align:center; color:#A020F0;">CLUB 69 — GAME PORTAL</h1>
 
     <div class="grid">
-
-        <!-- ROBLOX -->
-        <div class="card" onclick="loadGame('robloxLoad', 'https://whowillsurvive.coopfire.com/main.html')">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
-            <div class="label">ROBLOX</div>
+        <!-- 1v1.lol -->
+        <div class="card" onclick="loadGame('g1v1', '1v1-lol.html')">
+            <img src="https://i.imgur.com/4xQ2Z8P.png">
+            <div class="label">1V1.LOL</div>
         </div>
 
-        <!-- EAGLER WURST -->
+        <!-- Drive Mad -->
+        <div class="card" onclick="loadGame('driveMad', 'drivemady.html')">
+            <img src="https://i.imgur.com/2Z8xg7F.png">
+            <div class="label">DRIVE MAD</div>
+        </div>
+
+        <!-- Eaglercraft Wurst -->
         <div class="card" onclick="loadGame('hackLoad', 'eagler-hack.html')">
             <img src="https://avatarfiles.alphacoders.com/353/thumb-1920-353897.jpg">
             <div class="label">EAGLERCRAFT WURST CLIENT EDITION</div>
         </div>
 
-    </div>
+        <!-- Johnny Trigger -->
+        <div class="card" onclick="loadGame('johnny', 'johnny-trigger.html')">
+            <img src="https://i.imgur.com/8Qk2t8R.png">
+            <div class="label">JOHNNY TRIGGER</div>
+        </div>
 
-    <!-- README DESCRIPTION -->
+        <!-- Ragdoll Archers -->
+        <div class="card" onclick="loadGame('ragArch', 'archers.html')">
+            <img src="https://i.imgur.com/1k9t8dS.png">
+            <div class="label">RAGDOLL ARCHERS</div>
+        </div>
+
+        <!-- Ragdoll Drop -->
+        <div class="card" onclick="loadGame('ragDrop', 'ragdoll-drop.html')">
+            <img src="https://i.imgur.com/7p8t3gD.png">
+            <div class="label">RAGDOLL DROP</div>
+        </div>
+
+        <!-- Ragdoll Hit -->
+        <div class="card" onclick="loadGame('ragHit', 'ragdoll.html')">
+            <img src="https://i.imgur.com/6t8g3pF.png">
+            <div class="label">RAGDOLL HIT</div>
+        </div>
+
+        <!-- Roblox -->
+        <div class="card" onclick="loadGame('robloxLoad', 'https://whowillsurvive.coopfire.com/main.html')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
+            <div class="label">ROBLOX</div>
+        </div>
+
+        <!-- Slope Plus -->
+        <div class="card" onclick="loadGame('slope', 'slopeplus.html')">
+            <img src="https://i.imgur.com/3g8p2tD.png">
+            <div class="label">SLOPE PLUS</div>
+        </div>
+
+        <!-- Survival Race -->
+        <div class="card" onclick="loadGame('survival', 'survival-race.html')">
+            <img src="https://i.imgur.com/9t8g2pF.png">
+            <div class="label">SURVIVAL RACE</div>
+        </div>
+
+        <!-- Tiny Fishing -->
+        <div class="card" onclick="loadGame('tinyFish', 'tiny-fishing.html')">
+            <img src="https://i.imgur.com/5g8p2tD.png">
+            <div class="label">TINY FISHING</div>
+        </div>
+
+    </div> <!-- END GRID -->
+        <!-- README DESCRIPTION -->
     <div id="descriptionBox">
         <h2 style="color:#00C8FF;">About This Website</h2>
         <p>
@@ -240,20 +292,66 @@ function toggleFullscreen() {
         </p>
     </div>
 
+</div> <!-- END MAIN -->
+
+
+<!-- LOADING SCREENS FOR ALL GAMES -->
+
+<div id="g1v1" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_1V1.L0L...</div>
+    <div class="blue glitch">> B00T1NG_3NG1N3...</div>
 </div>
 
-<!-- LOADING SCREENS -->
-<div id="robloxLoad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_R0BL0X...</div>
-    <div class="blue glitch">> C0NN3CT1NG...</div>
-    <div class="pink glitch">> W41T_</div><span class="green glitch">0UTS1D3R_//</span>
+<div id="driveMad" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_DR1V3_M4D...</div>
+    <div class="blue glitch">> B00T1NG_C4R_PHYS1CS...</div>
 </div>
 
 <div id="hackLoad" class="loaderScreen">
     <div class="purple glitch">> L04D1NG_WURST_CL13NT...</div>
     <div class="blue glitch">> 3NG1N3_B00T...</div>
-    <div class="pink glitch">> W41T_</div><span class="green glitch">0UTS1D3R_//</span>
 </div>
+
+<div id="johnny" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_J0HNNY_TR1GG3R...</div>
+    <div class="blue glitch">> PR3P4R1NG_4CT10N...</div>
+</div>
+
+<div id="ragArch" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_R4GD0LL_4RCH3RS...</div>
+    <div class="blue glitch">> L04D1NG_PHYS1CS...</div>
+</div>
+
+<div id="ragDrop" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_R4GD0LL_DR0P...</div>
+    <div class="blue glitch">> PR3P4R1NG_1MP4CT...</div>
+</div>
+
+<div id="ragHit" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_R4GD0LL_H1T...</div>
+    <div class="blue glitch">> L04D1NG_3N3MY_41...</div>
+</div>
+
+<div id="robloxLoad" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_R0BL0X...</div>
+    <div class="blue glitch">> C0NN3CT1NG...</div>
+</div>
+
+<div id="slope" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_SL0P3_PLUS...</div>
+    <div class="blue glitch">> PR3P4R1NG_SP33D...</div>
+</div>
+
+<div id="survival" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_SURV1V4L_R4C3...</div>
+    <div class="blue glitch">> G3TT1NG_TR4CK_R34DY...</div>
+</div>
+
+<div id="tinyFish" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_T1NY_F1SH1NG...</div>
+    <div class="blue glitch">> SP4WNING_F1SH...</div>
+</div>
+
 
 <!-- ROBLOX TUTORIAL (COLLAPSIBLE) -->
 <div id="tutorialBox" style="
@@ -286,7 +384,7 @@ function toggleFullscreen() {
         <span class="purple">1.</span> Click on the Roblox game<br>
         <span class="blue">2.</span> Go to the little circle web button<br>
         <span class="pink">3.</span> Type in the search bar:<br>
-        <span class="green">"72.ip.nowgg.fun/apps/a/19900/b.html"</span><br>
+        <span class="green">https://nowgg.fun/apps/a/19900/b.html</span><br>
         <span class="purple">4.</span> Let it load and you're good to go!
     </div>
 
