@@ -98,40 +98,6 @@
         bottom: 10px;
     }
 
-    /* POPUP MENU */
-    #eaglerMenu {
-        display: none;
-        position: fixed;
-        top: 50%; left: 50%;
-        transform: translate(-50%, -50%);
-        background: #111;
-        padding: 25px;
-        border: 2px solid #A020F0;
-        border-radius: 12px;
-        text-align: center;
-        z-index: 999;
-    }
-
-    #eaglerMenu button {
-        background: #A020F0;
-        border: none;
-        padding: 12px 20px;
-        margin: 10px;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 8px;
-        transition: 0.2s;
-    }
-
-    #eaglerMenu button:hover {
-        background: #00C8FF;
-    }
-
-    #closeMenu {
-        background: #FF2EC4;
-    }
-
     /* LOADING SCREEN */
     .loaderScreen {
         display: none;
@@ -171,6 +137,18 @@
         display: none;
         z-index: 99999;
     }
+
+    /* DESCRIPTION BOX */
+    #descriptionBox {
+        width: 90%;
+        margin: 40px auto;
+        background: #0a0a0a;
+        border: 2px solid #00C8FF;
+        border-radius: 12px;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+    }
 </style>
 
 <script>
@@ -183,14 +161,6 @@ window.onload = function() {
         }, 1500);
     }, 2500);
 };
-
-function openEaglerMenu() {
-    document.getElementById("eaglerMenu").style.display = "block";
-}
-
-function closeEaglerMenu() {
-    document.getElementById("eaglerMenu").style.display = "none";
-}
 
 function loadGame(id, file) {
     document.getElementById("main").style.display = "none";
@@ -246,27 +216,30 @@ function toggleFullscreen() {
     <div class="grid">
 
         <!-- ROBLOX -->
-        <div class="card" onclick="loadGame('robloxLoad', 'roblox.html')">
+        <div class="card" onclick="loadGame('robloxLoad', 'https://whowillsurvive.coopfire.com/main.html')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
             <div class="label">ROBLOX</div>
         </div>
 
-        <!-- EAGLER -->
-        <div class="card" onclick="openEaglerMenu()">
+        <!-- EAGLER WURST -->
+        <div class="card" onclick="loadGame('hackLoad', 'eagler-hack.html')">
             <img src="https://avatarfiles.alphacoders.com/353/thumb-1920-353897.jpg">
-            <div class="label">EAGLERCRAFT 1.12</div>
+            <div class="label">EAGLERCRAFT WURST CLIENT EDITION</div>
         </div>
 
     </div>
-</div>
 
-<!-- EAGLER MENU -->
-<div id="eaglerMenu">
-    <h2 style="color:#A020F0;">Choose Version</h2>
+    <!-- README DESCRIPTION -->
+    <div id="descriptionBox">
+        <h2 style="color:#00C8FF;">About This Website</h2>
+        <p>
+            This is the official CLUB 69 game portal.  
+            Featuring Roblox access and the Eaglercraft Wurst Client Edition.  
+            Designed with a glitchy neon aesthetic and optimized for iframe gameplay.  
+            Enjoy fullscreen mode, loading animations, and a smooth UI experience.
+        </p>
+    </div>
 
-    <button onclick="closeEaglerMenu(); loadGame('normalLoad', 'eagler-normal.html')">Normal 1.12</button>
-    <button onclick="closeEaglerMenu(); loadGame('hackLoad', 'eagler-hack.html')">Hack Client</button>
-    <button id="closeMenu" onclick="closeEaglerMenu()">Close</button>
 </div>
 
 <!-- LOADING SCREENS -->
@@ -276,17 +249,63 @@ function toggleFullscreen() {
     <div class="pink glitch">> W41T_</div><span class="green glitch">0UTS1D3R_//</span>
 </div>
 
-<div id="normalLoad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_1.12...</div>
-    <div class="blue glitch">> ST4RT1NG_3NG1N3...</div>
+<div id="hackLoad" class="loaderScreen">
+    <div class="purple glitch">> L04D1NG_WURST_CL13NT...</div>
+    <div class="blue glitch">> 3NG1N3_B00T...</div>
     <div class="pink glitch">> W41T_</div><span class="green glitch">0UTS1D3R_//</span>
 </div>
 
-<div id="hackLoad" class="loaderScreen">
-    <div class="purple glitch">> L04D1NG_H4CK_CL13NT...</div>
-    <div class="blue glitch">> 3XPL01T_M0DUL3S...</div>
-    <div class="pink glitch">> W41T_</div><span class="green glitch">0UTS1D3R_//</span>
+<!-- ROBLOX TUTORIAL (COLLAPSIBLE) -->
+<div id="tutorialBox" style="
+    width: 90%;
+    margin: 40px auto;
+    background: #0a0a0a;
+    border: 2px solid #A020F0;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+">
+
+    <div id="tutorialHeader" style="
+        padding: 15px;
+        font-size: 22px;
+        color: #A020F0;
+        text-align: center;
+        user-select: none;
+    ">
+        Tutorial on how to get to Roblox! ▼
+    </div>
+
+    <div id="tutorialContent" style="
+        display: none;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+    ">
+        <span class="purple">1.</span> Click on the Roblox game<br>
+        <span class="blue">2.</span> Go to the little circle web button<br>
+        <span class="pink">3.</span> Type in the search bar:<br>
+        <span class="green">"72.ip.nowgg.fun/apps/a/19900/b.html"</span><br>
+        <span class="purple">4.</span> Let it load and you're good to go!
+    </div>
+
 </div>
+
+<script>
+document.getElementById("tutorialHeader").onclick = function() {
+    let content = document.getElementById("tutorialContent");
+    let header = document.getElementById("tutorialHeader");
+
+    if (content.style.display === "none") {
+        content.style.display = "block";
+        header.innerHTML = "Tutorial on how to get to Roblox! ▲";
+    } else {
+        content.style.display = "none";
+        header.innerHTML = "Tutorial on how to get to Roblox! ▼";
+    }
+};
+</script>
 
 </body>
 </html>
