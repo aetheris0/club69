@@ -145,6 +145,32 @@
         z-index: 9999;
         font-size: 22px;
     }
+
+    /* BACK BUTTON */
+    #backBtn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #FF2EC4;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: none;
+        z-index: 99999;
+    }
+
+    /* FULLSCREEN BUTTON */
+    #fullscreenBtn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #00C8FF;
+        padding: 10px 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        display: none;
+        z-index: 99999;
+    }
 </style>
 
 <script>
@@ -166,19 +192,44 @@ function closeEaglerMenu() {
     document.getElementById("eaglerMenu").style.display = "none";
 }
 
-function loadGame(id) {
+function loadGame(id, file) {
     document.getElementById("main").style.display = "none";
+    document.getElementById("backBtn").style.display = "block";
+    document.getElementById("fullscreenBtn").style.display = "block";
+
     let screen = document.getElementById(id);
     screen.style.display = "flex";
 
     setTimeout(() => {
-        screen.innerHTML = "<h2 style='color:#A020F0;'>GAME WOULD LOAD HERE</h2>";
+        screen.innerHTML = `
+            <iframe id="gameFrame" src="${file}" style="
+                width:100vw;
+                height:100vh;
+                border:none;
+                background:black;
+            "></iframe>
+        `;
     }, 2500);
+}
+
+function goBack() {
+    location.reload();
+}
+
+function toggleFullscreen() {
+    let frame = document.getElementById("gameFrame");
+    if (frame.requestFullscreen) frame.requestFullscreen();
 }
 </script>
 
 </head>
 <body>
+
+<!-- BACK BUTTON -->
+<div id="backBtn" onclick="goBack()">⬅ BACK</div>
+
+<!-- FULLSCREEN BUTTON -->
+<div id="fullscreenBtn" onclick="toggleFullscreen()">⛶ FULLSCREEN</div>
 
 <!-- INTRO -->
 <div id="intro">
@@ -195,7 +246,7 @@ function loadGame(id) {
     <div class="grid">
 
         <!-- ROBLOX -->
-        <div class="card" onclick="loadGame('robloxLoad')">
+        <div class="card" onclick="loadGame('robloxLoad', 'roblox.html')">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Roblox_%282025%29_%28App_Icon%29.svg/250px-Roblox_%282025%29_%28App_Icon%29.svg.png">
             <div class="label">ROBLOX</div>
         </div>
@@ -213,8 +264,8 @@ function loadGame(id) {
 <div id="eaglerMenu">
     <h2 style="color:#A020F0;">Choose Version</h2>
 
-    <button onclick="closeEaglerMenu(); loadGame('normalLoad')">Normal 1.12</button>
-    <button onclick="closeEaglerMenu(); loadGame('hackLoad')">Hack Client</button>
+    <button onclick="closeEaglerMenu(); loadGame('normalLoad', 'eagler-normal.html')">Normal 1.12</button>
+    <button onclick="closeEaglerMenu(); loadGame('hackLoad', 'eagler-hack.html')">Hack Client</button>
     <button id="closeMenu" onclick="closeEaglerMenu()">Close</button>
 </div>
 
